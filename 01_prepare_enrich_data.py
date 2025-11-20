@@ -282,7 +282,7 @@ from dfccf as ccf
 LEFT JOIN dfsmiggdppop as cfrom ON cfrom.{col_countrycode} = ccf.migrationfrom AND cfrom.year = ccf.year--migrationyearceil
 LEFT JOIN dfsmiggdppop as cto ON cto.{col_countrycode} = ccf.migrationto AND cto.year = ccf.year--migrationyearceil
 WHERE cfrom.{col_countrycode} NOT NULL AND cto.{col_countrycode} NOT NULL
- AND ccf.year >1997 and ccf.year <2019
+ AND ccf.year >1997 and ccf.year <2021
 """
 dfccf2 = con.execute(query).df()
 print(dfccf2.columns)
